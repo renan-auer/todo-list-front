@@ -57,3 +57,8 @@
     border-bottom: 2px solid #7386d5;
     padding-bottom: 15px;
 }
+
+.label-inline{
+    color: #6e6e6e;
+    margin-right: 10px;
+}

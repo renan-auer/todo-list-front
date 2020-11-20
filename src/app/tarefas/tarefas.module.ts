@@ -5,11 +5,13 @@ import {TarefasRoutingModule} from './tarefas-routing.module'
 
 import { TarefasPendentesComponent } from './tarefas-pendentes/tarefas-pendentes.component';
 import { TarefasConcluidasComponent } from './tarefas-concluidas/tarefas-concluidas.component';
+import { NovaTarefaComponent } from './nova-tarefa/nova-tarefa.component';
 
 @NgModule({
   declarations: [
     TarefasPendentesComponent,
-    TarefasConcluidasComponent
+    TarefasConcluidasComponent,
+    NovaTarefaComponent
   ],
   imports: [
     RouterModule,

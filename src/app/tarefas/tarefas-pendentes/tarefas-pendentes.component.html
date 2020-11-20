@@ -13,8 +13,14 @@
             </div>
 
             <div class="col-12 col-md-6 text-right">
-                <div class="option-new option-task">
+                <div class="option-new option-task" data-toggle="collapse" data-target="#nova-tarefa">
                     <i class="fa fa-plus"></i> Nova Tarefa
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="collapse" id="nova-tarefa">
+                    <app-nova-tarefa></app-nova-tarefa>
                 </div>
             </div>
         </div>
@@ -34,9 +40,9 @@
             </div>
             <div class="col-12 col-md-3 text-right">
                 <div class="btn-group">
-                    <button class="btn btn-success"><i class="fa fa-check"></i></button>
-                    <button class="btn btn-info"><i class="fa fa-edit"></i></button>
-                    <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                    <button class="btn btn-sm btn-success"><i class="fa fa-check"></i></button>
+                    <button class="btn btn-sm btn-info"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                 </div>
             </div>
         </div>
