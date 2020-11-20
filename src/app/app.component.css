@@ -1,12 +1,15 @@
 .wrapper {
     display: flex;
+    width: 100%;
     align-items: stretch;
+    background-color: #efefef;
 }
 
 #sidebar {
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
+    box-shadow: 14px 2px 29px 1px rgb(139 139 139);
 }
 
 #sidebar.active {

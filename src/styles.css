@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.page-box{
+    margin: 50px;
+    padding: 20px;
+    box-shadow: 14px 2px 29px 1px rgb(139 139 139);
+    background-color: white;
+}
+
+.tarefa{
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
+}
+
+.prazo-expirado{
+    color: #e84040;
+    font-size: 13px;
+}
+
+
+.option-task{
+    font-size: 14px;
+    margin-right: 15px;
+    font-weight: 700;
+}
+
+.option-concluir{
+    color: green;
+}
+
+.option-concluir:hover{
+    color: rgb(1, 107, 1);
+    cursor: pointer;
+}
+
+.option-apagar{
+    color: #e84040;
+}
+
+.option-apagar:hover{
+    color: #c22a2a;
+    cursor: pointer;
+}
+
+
+.option-new{
+    color: #40b3e8;
+}
+
+.option-new:hover{
+    color: #208bbd;
+    cursor: pointer;
+}
+
+.header-task{
+    border-bottom: 2px solid #7386d5;
+    padding-bottom: 15px;
+}
