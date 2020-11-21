@@ -12,6 +12,7 @@ export class TarefaComponent implements OnInit {
   @Input() tarefa;
   @Output() editar = new EventEmitter();  
   @Output() deletar = new EventEmitter();  
+  @Output() status = new EventEmitter();  
 
   ngOnInit(): void {
   }
@@ -22,6 +23,15 @@ export class TarefaComponent implements OnInit {
 
   deletarTarefa(tarefa){
     this.deletar.emit(tarefa.id);
+  }
+
+  toggleStatus(id, status){
+    let newStatus = status === 'PENDENTE' ? "CONCLUIDO" : "PENDENTE";
+    this.status.emit({
+      id : id,
+      status: newStatus
+    })
+
   }
 
 }

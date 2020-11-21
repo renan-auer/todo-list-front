@@ -34,7 +34,7 @@ export class NovaTarefaComponent implements OnInit {
 
   preparaForm(tarefa?) {
     this.formulario = this.formBuilder.group({
-      id: [tarefa ? tarefa.id : null, Validators.required],
+      id: [tarefa ? tarefa.id : null],
       descricao: [tarefa ? tarefa.descricao : null, Validators.required],
       prazo: [tarefa ? tarefa.prazo : null, Validators.required],
       status: [tarefa ? tarefa.status : this.status, Validators.required]
@@ -43,10 +43,10 @@ export class NovaTarefaComponent implements OnInit {
 
   submit() {
     this.isSubmitted = true;
+    
     if (!this.formulario.valid)
       return;
 
-  
     this.saveOrUpdate(this.formulario.value).subscribe(data=>{
       this.salvou.emit();
     })

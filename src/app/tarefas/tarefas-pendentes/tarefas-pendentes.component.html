@@ -24,8 +24,9 @@
         <div *ngFor="let tarefa of tarefas">
             <app-tarefa 
             [tarefa]="tarefa" 
-            (editar)="editarTarefa($event   )"
+            (editar)="editarTarefa($event)"
             (deletar)="deletarTarefa($event)"
+            (status)="updateStatus($event)"
             >
             </app-tarefa>
         </div>

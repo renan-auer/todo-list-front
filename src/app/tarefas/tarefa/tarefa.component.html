@@ -11,10 +11,12 @@
     </div>
     <div class="col-12 col-md-3 text-right">
         <div class="btn-group">
-            <button class="btn btn-sm btn-success" *ngIf="tarefa.status == 'PENDENTE'">
+            <button class="btn btn-sm btn-success" (click)="toggleStatus(tarefa.id)"
+            *ngIf="tarefa.status == 'PENDENTE'">
                 <i class="fa fa-check"></i>
             </button>
-            <button class="btn btn-sm btn-warning" *ngIf="tarefa.status == 'CONCLUIDO'">
+            <button class="btn btn-sm btn-warning" (click)="toggleStatus(tarefa.id)"
+            *ngIf="tarefa.status == 'CONCLUIDO'">
                 <i class="fa fa-clock" style="color: white;" ></i>
             </button>
             <button class="btn btn-sm btn-info" (click)="editarTarefa(tarefa)">

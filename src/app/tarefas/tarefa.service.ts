@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-
 @Injectable({
     providedIn: 'root'
 })
@@ -23,6 +22,10 @@ export class TarefaService {
 
     editarTarefa(tarefa) {
         return this.http.put("http://localhost:3000/tarefas", tarefa);
+    }
+
+    alterarStatus(data) {
+        return this.http.put("http://localhost:3000/tarefas/status", data);
     }
 
     deletarTarefa(id) {

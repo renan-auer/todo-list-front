@@ -40,13 +40,17 @@ export class TarefasConcluidasComponent implements OnInit {
 
   editarTarefa(tarefa){
     this.tarefaEdicao = tarefa;
-    this.isCollapseTarefa = false;
+    this.isCollapseTarefa = true;
     $('#nova-tarefa').collapse()
   } 
 
   deletarTarefa(id){
     console.log(id)
     this.tarefaService.deletarTarefa(id).subscribe(data=> this.getTarefas())
+  }
+
+  updateStatus(data){
+    this.tarefaService.alterarStatus(data).subscribe(data=>this.getTarefas())
   }
 
 }
