@@ -26,6 +26,7 @@ export class TarefaComponent implements OnInit {
   }
 
   toggleStatus(id, status){
+    console.log(status);
     let newStatus = status === 'PENDENTE' ? "CONCLUIDO" : "PENDENTE";
     this.status.emit({
       id : id,

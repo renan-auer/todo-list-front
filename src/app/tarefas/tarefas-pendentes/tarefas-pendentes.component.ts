@@ -47,7 +47,7 @@ export class TarefasPendentesComponent implements OnInit {
     this.tarefaService.deletarTarefa(id).subscribe(data=> this.getTarefas())
   }
 
-  alterarStatus(data){
+  updateStatus(data){
     this.tarefaService.alterarStatus(data).subscribe(data=>this.getTarefas())
   }
 }
