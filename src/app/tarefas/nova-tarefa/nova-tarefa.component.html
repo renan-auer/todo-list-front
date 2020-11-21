@@ -1,23 +1,29 @@
-<form class="nova-tarefa form-inline">
+<form class="nova-tarefa" [formGroup]="formulario" (ngSubmit)="submit()">
     <div class="row">
         <div class="col-12">
-            <textarea id="nova-tarefa-area" style="width: 100%;" cols="30" rows="4"
-                placeholder="Escreva sua tarefa aqui"></textarea>
+            <textarea id="nova-tarefa-area" class="form-control" style="width: 100%;" cols="30" rows="4"
+                placeholder="Escreva sua tarefa aqui" formControlName="descricao"
+                [ngClass]="{'is-invalid' : isSubmitted && f.descricao.errors}"></textarea>
+            <div class="invalid-feedback">Campo inválido</div>
         </div>
         <div class="col-12 col-md-5">
-            <div class="form-group">
-            <label class="label-inline" for="prazo">Prazo: </label>
-                <input type="date" class="form-control" id="prazo">
-            </div>
+                <label for="prazo" class="label">Prazo: </label>
+                <input type="date" class="form-control" id="prazo" formControlName="prazo"
+                    [ngClass]="{'is-invalid' : isSubmitted && f.prazo.errors}">
+                <div class="invalid-feedback">Campo inválido</div>
+
         </div>
         <div class="col-12 col-md-7 text-right">
-            <div class="btn-group">
-                <button class="btn  btn-sm btn-secondary" data-toggle="collapse" data-target="#nova-tarefa">
-                    Cancelar
-                </button>
-                <button class="btn  btn-sm btn-primary">
-                    Salvar
-                </button>
+            <label for="botoes">&nbsp;</label>
+            <div id="botoes">
+                <div class="btn-group" >
+                    <button class="btn  btn-sm btn-secondary" data-toggle="collapse" data-target="#nova-tarefa">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-sm btn-primary">
+                        Salvar
+                    </button>
+                </div>
             </div>
         </div>
     </div>

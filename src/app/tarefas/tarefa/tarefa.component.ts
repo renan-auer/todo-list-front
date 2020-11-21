@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tarefa',
@@ -9,7 +9,19 @@ export class TarefaComponent implements OnInit {
 
   constructor() { }
 
+  @Input() tarefa;
+  @Output() editar = new EventEmitter();  
+  @Output() deletar = new EventEmitter();  
+
   ngOnInit(): void {
+  }
+
+  editarTarefa(tarefa){
+    this.editar.emit(tarefa);
+  }
+
+  deletarTarefa(tarefa){
+    this.deletar.emit(tarefa.id);
   }
 
 }

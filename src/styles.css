@@ -25,25 +25,6 @@
     font-weight: 700;
 }
 
-.option-concluir{
-    color: green;
-}
-
-.option-concluir:hover{
-    color: rgb(1, 107, 1);
-    cursor: pointer;
-}
-
-.option-apagar{
-    color: #e84040;
-}
-
-.option-apagar:hover{
-    color: #c22a2a;
-    cursor: pointer;
-}
-
-
 .option-new{
     color: #40b3e8;
 }
@@ -58,7 +39,12 @@
     padding-bottom: 15px;
 }
 
-.label-inline{
+.label{
     color: #6e6e6e;
     margin-right: 10px;
+    margin-bottom: 1px;
+}
+
+.title{
+    color: #7386d5;
 }

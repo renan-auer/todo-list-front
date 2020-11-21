@@ -7,6 +7,9 @@ import { TarefasPendentesComponent } from './tarefas-pendentes/tarefas-pendentes
 import { TarefasConcluidasComponent } from './tarefas-concluidas/tarefas-concluidas.component';
 import { NovaTarefaComponent } from './nova-tarefa/nova-tarefa.component';
 import { TarefaComponent } from './tarefa/tarefa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,11 @@ import { TarefaComponent } from './tarefa/tarefa.component';
   ],
   imports: [
     RouterModule,
-    TarefasRoutingModule
+    HttpClientModule,
+    TarefasRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule 
   ]
 })
 export class TarefasModule { }

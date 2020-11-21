@@ -1,29 +1,33 @@
 <div class="page-box">
     <div class="container">
         <div class="row header-task">
-            <div class="col-12 col-md-6">
-                <div class="d-flex">
-                    <div class="option-task option-concluir">
-                        <i class="fa fa-check"></i> Concluir
-                    </div>
-                    <div class="option-task option-apagar">
-                        <i class="fa fa-trash"></i> Apagar
-                    </div>
-                </div>
+            <div class="col-12 col-md-6 ">
+                <h4 class="title">Tarefas Pendentes</h4>
             </div>
-
             <div class="col-12 col-md-6 text-right">
-                <div class="option-new option-task" data-toggle="collapse" data-target="#nova-tarefa">
+                <div class="option-new option-task" (click)="novaTarefa()">
                     <i class="fa fa-plus"></i> Nova Tarefa
                 </div>
             </div>
 
             <div class="col-12">
                 <div class="collapse" id="nova-tarefa">
-                    <app-nova-tarefa></app-nova-tarefa>
+                    <app-nova-tarefa
+                    *ngIf="isCollapseTarefa"
+                    [tarefaEdicao]="tarefaEdicao" 
+                    [status]="status" 
+                    (salvou)="novaTarefa(); getTarefas()">
+                    </app-nova-tarefa>
                 </div>
             </div>
         </div>
-           <app-tarefa></app-tarefa>
+        <div *ngFor="let tarefa of tarefas">
+            <app-tarefa 
+            [tarefa]="tarefa" 
+            (editar)="editarTarefa($event   )"
+            (deletar)="deletarTarefa($event)"
+            >
+            </app-tarefa>
+        </div>
     </div>
 </div>
